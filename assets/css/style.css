@@ -166,7 +166,7 @@ img{max-width:100%;display:block}
 .section-invite .quote{font-style:italic;opacity:.9;border-left:3px solid var(--accent);padding-left:var(--space-lg);font-size:var(--font-size-lg);line-height:var(--line-height-relaxed);color:var(--text-secondary);position:relative}
 .section-invite .quote::before{content:'"';position:absolute;left:-8px;top:-10px;font-size:60px;color:var(--gold);opacity:.3;font-family:serif}
 .section-invite .verse .quote{font-size:clamp(14px, 4vw, 24px);line-height:1.7;padding-left:16px;border-left:3px solid var(--gold);word-wrap:break-word;hyphens:auto;text-align:justify;text-justify:inter-word;overflow-wrap:anywhere}
-.section-invite .intro .guest-name{display:inline-block;margin:0 0 var(--space-lg);padding:var(--space-sm) var(--space-lg);border-radius:var(--radius-xl);border:1px solid var(--glass-medium);background:linear-gradient(135deg, var(--glass-light), var(--glass-subtle));color:var(--accent-light);font-weight:var(--font-weight-semibold);backdrop-filter:blur(10px);box-shadow:var(--shadow-soft)}
+.section-invite .intro .guest-name{display:block;margin:0 0 var(--space-lg);padding:var(--space-sm) var(--space-lg);border-radius:var(--radius-xl);border:1px solid var(--glass-medium);background:linear-gradient(135deg, var(--glass-light), var(--glass-subtle));color:var(--accent-light);font-weight:var(--font-weight-semibold);backdrop-filter:blur(10px);box-shadow:var(--shadow-soft)}
 
 /* ----- Details ----- */
 .section-details{background:linear-gradient(180deg, var(--primary-light) 0%, var(--primary) 100%);position:relative}
