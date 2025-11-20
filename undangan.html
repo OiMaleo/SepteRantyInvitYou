@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Ranti & Septe - Undangan Pernikahan</title>
+  <meta name="description" content="Undangan pernikahan Ranti & Septe – Kamis, 27 November 2025 di Palopo. Misa Pemberkatan & Resepsi di Kios Enneng." />
+  <meta property="og:title" content="Ranti & Septe - Undangan Pernikahan" />
+  <meta property="og:description" content="Kami mengundang Anda untuk merayakan pernikahan kami. Kamis, 27 November 2025 - Palopo" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 630'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%' y1='0%' x2='100%' y2='100%'%3E%3Cstop offset='0%' style='stop-color:%230a1b36;stop-opacity:1' /%3E%3Cstop offset='100%' style='stop-color:%230b2447;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1200' height='630' fill='url(%23grad)'/%3E%3Ctext x='600' y='280' font-family='serif' font-size='80' font-weight='bold' fill='%23d4af37' text-anchor='middle'%3ERanti %26 Septe%3C/text%3E%3Ctext x='600' y='360' font-family='sans-serif' font-size='40' fill='%23f4f6ff' text-anchor='middle' opacity='0.9'%3E27 November 2025%3C/text%3E%3C/svg%3E" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' font-family='serif' fill='%23d4af37'>💍</text></svg>" />
+</head>
+<body data-countdown="2025-11-27T10:00:00+07:00">
+  <!-- Loader -->
+  <div id="loader" class="loader hidden">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Music Control -->
+  <audio id="bgm" loop preload="none">
+    <source src="assets/audio/background-music.mp3" type="audio/mpeg" />
+  </audio>
+  <button id="music-toggle" aria-label="Toggle music" class="music-toggle paused">♫</button>
+
+  <!-- Hero / Cover -->
+  <section class="hero">
+    <div class="overlay"></div>
+    <img class="texture" src="assets/images/velvet-texture.jpg" alt="Texture" onerror="this.style.display='none'" />
+
+    <!-- Floating Particles -->
+    <div class="floating-particles">
+      <div class="particle particle-1"></div>
+      <div class="particle particle-2"></div>
+      <div class="particle particle-3"></div>
+      <div class="particle particle-4"></div>
+      <div class="particle particle-5"></div>
+      <div class="particle particle-6"></div>
+    </div>
+
+    <img class="hero-background-image hero-background-image-top animate-float" src="assets/images/2.png" alt="Wedding Background Top" />
+    <img class="hero-background-image animate-float-delayed" src="assets/images/1.png" alt="Wedding Background" />
+    <div class="hero-inner">
+      <p class="pretitle animate-fade-in-up">The Wedding of</p>
+      <h1 class="couple animate-bounce-in">
+        <span class="letter-animate">R</span><span class="letter-animate">a</span><span class="letter-animate">n</span><span class="letter-animate">t</span><span class="letter-animate">i</span>
+        <span class="ampersand animate-glow">&</span>
+        <span class="letter-animate">S</span><span class="letter-animate">e</span><span class="letter-animate">p</span><span class="letter-animate">t</span><span class="letter-animate">e</span>
+      </h1>
+      <p class="date animate-fade-in-up-delayed">Kamis, 27 November 2025 • Palopo</p>
+    </div>
+
+    <!-- Elegant Scroll Indicator -->
+    <div class="scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <p></p>
+    </div>
+  </section>
+
+  <!-- Invitation Block -->
+  <section id="invitation" class="section section-invite container decorative-border">
+    <h2 class="gold-accent animate-slide-up" style="text-align:center;font-family:'Playfair Display',serif;font-size:28px;margin-bottom:40px;color:#f4f6ff;letter-spacing:2px;">WEDDING INVITATION</h2>
+    <div class="grid-2">
+      <div class="card glass verse">
+        <div class="card-glow"></div>
+        <p class="quote animate-fade-in">"Sebab itu laki-laki akan meninggalkan ayahnya dan ibunya dan bersatu dengan istrinya, sehingga keduanya menjadi satu daging." — Kejadian 2:24</p>
+      </div>
+      <div class="card glass intro">
+        <div class="card-glow"></div>
+        <p id="guest-name" class="guest-name" hidden>Dear <span id="guest-name-text"></span></p>
+        <p class="greeting">We cordially invite you to attend our wedding.</p>
+        <h2 class="names">Ranti & Septe</h2>
+        <div class="elegant-divider"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Details (Misa Pemberkatan & Resepsi) -->
+  <section class="section section-details">
+    <div class="container">
+      <h2 class="gold-accent animate-slide-up" style="text-align:center;font-family:'Playfair Display',serif;font-size:32px;margin-bottom:60px;color:#f4f6ff;letter-spacing:2px;">WEDDING EVENTS</h2>
+      <div class="grid-2">
+        <div class="detail-card glass">
+          <div class="card-glow"></div>
+          <div class="event-icon">⛪</div>
+          <h3>Misa Pemberkatan</h3>
+          <p class="time">Kamis, 27 November 2025 • 10:00 WIB</p>
+          <p class="place">St. Michael Catholic Church</p>
+          <p class="address">Palopo</p>
+          <div class="actions">
+            <a class="btn btn-outline" target="_blank" href="https://www.google.com/maps/place/St.+Michael+Catholic+Church/@-2.9932701,120.1931736,17z/data=!3m1!4b1!4m6!3m5!1s0x2d915f03564a23e7:0xfab639b5f300ff71!8m2!3d-2.9932701!4d120.1931736">Lihat Peta</a>
+            <a class="btn btn-light" target="_blank" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Misa+Pemberkatan+Ranti+%26+Septe&dates=20251127T030000Z/20251127T050000Z&details=Misa+Pemberkatan&location=St.+Michael+Catholic+Church">Simpan ke Kalender</a>
+          </div>
+        </div>
+        <div class="detail-card glass">
+          <div class="card-glow"></div>
+          <div class="event-icon">🎉</div>
+          <h3>Resepsi</h3>
+          <p class="time">Kamis, 27 November 2025 • 12:00 WIB</p>
+          <p class="place">Kios Enneng</p>
+          <p class="address">Jl. Enneng, Palopo</p>
+          <div class="actions">
+            <a class="btn btn-outline " target="_blank" href="https://www.google.com/maps/place/Kios+Enneng/@-2.9938863,120.1901129,17z/data=!3m1!4b1!4m6!3m5!1s0x2d915f09063914b1:0x24d21b5b515645d5!8m2!3d-2.9938863!4d120.1901129">Lihat Peta</a>
+            <a class="btn btn-light " target="_blank" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Resepsi+Ranti+%26+Septe&dates=20251127T050000Z/20251127T080000Z&details=Resepsi+Pernikahan&location=Kios+Enneng">Simpan ke Kalender</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Countdown -->
+  <section class="section section-countdown">
+    <div class="container">
+      <h3 class="gold-accent animate-slide-up">Towards the Happy Day</h3>
+      <div id="countdown" class="countdown">
+        <div class="cd-item glass animate-bounce-in">
+          <div class="cd-shine"></div>
+          <span id="cd-days" class="animate-counter">0</span>
+          <small>Days</small>
+        </div>
+        <div class="cd-item glass animate-bounce-in-delayed">
+          <div class="cd-shine"></div>
+          <span id="cd-hours" class="animate-counter">0</span>
+          <small>Jam</small>
+        </div>
+        <div class="cd-item glass animate-bounce-in-delayed-2">
+          <div class="cd-shine"></div>
+          <span id="cd-mins" class="animate-counter">0</span>
+          <small>Menit</small>
+        </div>
+        <div class="cd-item glass animate-bounce-in-delayed-3">
+          <div class="cd-shine"></div>
+          <span id="cd-secs" class="animate-counter">0</span>
+          <small>Detik</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Location / Lokasi Acara -->
+  <section class="section section-location">
+    <div class="container">
+      <h3 class="gold-accent animate-slide-up">Lokasi Acara</h3>
+      <div class="location-card glass">
+        <div class="location-content">
+          <div class="location-info">
+            <h4>Kios Enneng</h4>
+            <p class="address">Jl. Enneng, Palopo</p>
+            <p class="event-time">Kamis, 27 November 2025 • 10.00 WIB</p>
+            <a class="btn btn-outline" target="_blank" href="https://www.google.com/maps/place/Kios+Enneng/@-2.9938863,120.1901129,17z/data=!3m1!4b1!4m6!3m5!1s0x2d915f09063914b1:0x24d21b5b515645d5!8m2!3d-2.9938863!4d120.1901129">Buka di Google Maps</a>
+          </div>
+          <div class="barcode-container">
+            <div class="barcode">
+              <div class="barcode-lines">
+                <div class="barcode-line thick"></div>
+                <div class="barcode-line thin"></div>
+                <div class="barcode-line medium"></div>
+                <div class="barcode-line thin"></div>
+                <div class="barcode-line thick"></div>
+                <div class="barcode-line thin"></div>
+                <div class="barcode-line medium"></div>
+                <div class="barcode-line thin"></div>
+                <div class="barcode-line thick"></div>
+              </div>
+              <div class="barcode-text">RANTI & SEPTE</div>
+            </div>
+          </div>
+        </div>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3973.6912635817717!2d120.18911269999999!3d-2.9938863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d915f09063914b1%3A0x24d21b5b515645d5!2sKios%20Enneng!5e0!3m2!1sid!2sid!4v1700000000000"
+            width="100%"
+            height="300"
+            style="border:0;border-radius:15px;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>Terima kasih atas doa dan kehadiran Anda.</p>
+      <small>Ranti & Septe</small>
+    </div>
+  </footer>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress">
+    <div class="scroll-progress-bar"></div>
+  </div>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+# CONTOH DAFTAR TAMU UNDANGAN PERNIKAHAN
+# Ranti & Septe - 19 November 2025
+
+# ==========================================
+# KELUARGA BESAR MEMPELAI WANITA (RANTI)
+# ==========================================
+
+Keluarga Bapak Ahmad & Ibu Siti (Ayah Ranti)
+Keluarga Bapak Budi & Ibu Maya (Paman Ranti)
+Keluarga Bapak Chandra & Ibu Lisa (Om Ranti)
+Keluarga Bapak Denny & Ibu Nina (Paman Ranti)
+Sdr. Rina Wijaya (Sepupu Ranti)
+Sdr. Tono Santoso (Sepupu Ranti)
+Sdr. Maya Sari (Sepupu Ranti)
+
+# ==========================================
+# KELUARGA BESAR MEMPELAI PRIA (SEPTE)
+# ==========================================
+
+Keluarga Bapak Hendro & Ibu Sari (Ayah Septe)
+Keluarga Bapak Joko & Ibu Ani (Paman Septe)
+Keluarga Bapak Kusumo & Ibu Ratna (Om Septe)
+Sdr. Budi Santoso (Sepupu Septe)
+Sdr. Citra Lestari (Sepupu Septe)
+Sdr. Doni Prabowo (Sepupu Septe)
+
+# ==========================================
+# TEMAN-TEMAN KERJA RANTI
+# ==========================================
+
+Dr. Hendro Kusumo & Istri
+Ir. Sari Indah & Suami
+Maya Putri & Keluarga
+Budi Santoso & Istri
+Citra Lestari & Suami
+
+# ==========================================
+# TEMAN-TEMAN KERJA SEPTE
+# ==========================================
+
+Andi Wijaya & Keluarga
+Siti Nurhaliza & Suami
+Rudi Hartono & Istri
+Nina Sari & Keluarga
+Tono Prabowo & Istri
+
+# ==========================================
+# TEMAN KULIAH & SAHABAT
+# ==========================================
+
+Keluarga Rudi & Maya
+Keluarga Andi & Sari
+Keluarga Budi & Citra
+Keluarga Tono & Nina
+Keluarga Hendro & Lisa
+
+# ==========================================
+# TETANGGA & KERABAT JAUH
+# ==========================================
+
+Pak RT & Ibu RT
+Pak RW & Ibu RW
+Keluarga Pak Lurah
+Keluarga Bapak Camat
+Keluarga Bapak Kades
+
+# ==========================================
+# TAMU VIP & SPESIAL
+# ==========================================
+
+Dr. Ahmad Santoso (Direktur Utama)
+Ir. Budi Prasetyo (Kepala Dinas)
+Hj. Siti Nurhaliza (Tokoh Masyarakat)
+K.H. Abdullah (Ustadz)
+Prof. Dr. Hendro Kusumo (Dosen)</content>
+</xai:function_call">Write">
+<parameter name="file_path">d:\undangan\contoh-daftar-tamu.txt

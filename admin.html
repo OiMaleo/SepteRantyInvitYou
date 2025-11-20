@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Admin Panel — Tamu Undangan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    .admin-wrap{padding:28px 0}
+    .toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+    .card h3{margin:0 0 10px}
+    table{width:100%;border-collapse:collapse}
+    th,td{padding:10px 12px;border-bottom:1px solid rgba(255,255,255,.15)}
+    th{text-align:left;opacity:.9}
+    .muted{opacity:.8}
+    .inline-form{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+    .inline-form input{padding:10px 12px;border-radius:10px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);color:#fff}
+    .actions{display:flex;gap:8px}
+    .note{opacity:.85;font-size:14px;margin-top:8px}
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06)}
+    @media(min-width:860px){.grid-2-admin{display:grid;grid-template-columns:2fr 1fr;gap:20px}}
+    .mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}
+  </style>
+</head>
+<body>
+  <main class="container admin-wrap">
+    <h1 style="font-family:'Playfair Display',serif;margin:0 0 8px">Admin Panel — Tamu Undangan</h1>
+    <p class="muted">Kelola daftar tamu, buat tautan personal, dan ekspor file JSON untuk dipakai di hosting.</p>
+
+    <div class="grid-2-admin">
+      <section class="card glass">
+        <h3>Daftar Tamu</h3>
+        <div class="toolbar">
+          <label class="btn btn-light" for="file-import">Import JSON</label>
+          <input id="file-import" type="file" accept="application/json" hidden>
+          <button id="btn-export" class="btn btn-outline">Export JSON</button>
+          <button id="btn-clear" class="btn btn-outline">Kosongkan Daftar</button>
+        </div>
+
+        <div class="inline-form">
+          <input id="input-name" type="text" placeholder="Nama tamu baru (auto-ID)" />
+          <button id="btn-add" class="btn btn-primary">Tambah</button>
+        </div>
+        <p class="note">ID akan dibuat otomatis berurutan. Anda dapat mengedit nama setelah ditambahkan.</p>
+
+        <div style="margin-top:16px;overflow:auto">
+          <table>
+            <thead>
+              <tr>
+                <th style="width:80px">ID</th>
+                <th>Nama</th>
+                <th style="width:280px">Aksi</th>
+              </tr>
+            </thead>
+            <tbody id="guest-tbody">
+              <tr><td colspan="3" class="muted">Memuat data...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <aside class="card glass">
+        <h3>Generator Tautan</h3>
+        <p>Pilih tamu pada tabel, lalu klik <span class="pill">Link</span> untuk menyalin tautan personal:</p>
+        <ul>
+          <li>Index: <code class="mono">index.html?id=ID</code> atau <code class="mono">?to=Nama</code></li>
+          <li>Undangan langsung: <code class="mono">undangan.html?to=Nama</code></li>
+        </ul>
+        <p class="note">Nama akan tampil di halaman depan dan halaman undangan. File <code class="mono">assets/guests.json</code> dipakai saat Anda menggunakan parameter <code class="mono">?id=</code>.</p>
+      </aside>
+    </div>
+
+    <section class="card glass" style="margin-top:20px">
+      <h3>Panduan Deploy</h3>
+      <ol>
+        <li>Kelola daftar tamu di sini, lalu klik <strong>Export JSON</strong>.</li>
+        <li>Ganti file <code class="mono">assets/guests.json</code> di project/hosting Anda dengan hasil export.</li>
+        <li>Bagikan tautan personal ke tamu.</li>
+      </ol>
+    </section>
+  </main>
+
+  <script src="assets/js/admin.js"></script>
+</body>
+</html>

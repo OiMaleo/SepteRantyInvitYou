@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Personalization - Undangan Ranti & Septe</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0b2447, #19376d);
+            color: #f4f6ff;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(244, 246, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            color: #d4af37;
+            margin-bottom: 30px;
+        }
+
+        .test-section {
+            margin-bottom: 30px;
+        }
+
+        .test-input {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #f4f6ff;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .test-input:focus {
+            outline: none;
+            border-color: #d4af37;
+        }
+
+        .test-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #d4af37, #b8860b);
+            color: #0b2447;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
+        }
+
+        .test-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+        }
+
+        .result {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .result h3 {
+            color: #d4af37;
+            margin-bottom: 10px;
+        }
+
+        .result p {
+            margin-bottom: 10px;
+            word-break: break-all;
+        }
+
+        .preview-link {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.2);
+            color: #d4af37;
+            padding: 10px 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            border: 1px solid #d4af37;
+            transition: all 0.3s ease;
+        }
+
+        .preview-link:hover {
+            background: #d4af37;
+            color: #0b2447;
+        }
+
+        .examples {
+            background: rgba(212, 175, 55, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .examples h3 {
+            color: #d4af37;
+            margin-bottom: 15px;
+        }
+
+        .example-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 Test Personalization Undangan</h1>
+
+        <div class="examples">
+            <h3>📝 Contoh Nama yang Bisa Digunakan:</h3>
+            <div class="example-item">Bapak Ahmad & Ibu Siti</div>
+            <div class="example-item">Keluarga Budi Santoso</div>
+            <div class="example-item">Sdr. Rina Wijaya</div>
+            <div class="example-item">Dr. Hendro Kusumo & Istri</div>
+            <div class="example-item">Prof. Dr. Sari Indah, M.Pd</div>
+        </div>
+
+        <div class="test-section">
+            <input type="text" id="test-name" class="test-input" placeholder="Masukkan nama tamu untuk test..." value="Bapak Ahmad & Ibu Siti">
+            <button class="test-btn" onclick="generateTestLink()">🔗 Generate Test Link</button>
+        </div>
+
+        <div id="result" class="result" style="display: none;">
+            <h3>✅ Link Test Berhasil Dibuat:</h3>
+            <p id="generated-link"></p>
+            <a id="preview-link" href="#" target="_blank" class="preview-link">👀 Preview Undangan</a>
+        </div>
+    </div>
+
+    <script>
+        function generateTestLink() {
+            const testName = document.getElementById('test-name').value.trim();
+
+            if (!testName) {
+                alert('Silakan masukkan nama tamu terlebih dahulu!');
+                return;
+            }
+
+            // Encode the name for URL
+            const encodedName = encodeURIComponent(testName);
+
+            // Generate the full URL (adjust path as needed)
+            const baseUrl = window.location.origin + window.location.pathname.replace('test-personalization.html', 'undangan.html');
+            const fullUrl = `${baseUrl}?nama=${encodedName}`;
+
+            // Update the result section
+            document.getElementById('generated-link').textContent = fullUrl;
+            document.getElementById('preview-link').href = fullUrl;
+            document.getElementById('result').style.display = 'block';
+
+            // Scroll to result
+            document.getElementById('result').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Auto-generate on page load with default value
+        window.addEventListener('load', () => {
+            if (document.getElementById('test-name').value) {
+                generateTestLink();
+            }
+        });
+    </script>
+</body>
+</html></content>
+</xai:function_call">Write">
+<parameter name="file_path">d:\undangan\test-personalization.html
