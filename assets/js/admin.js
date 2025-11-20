@@ -1,5 +1,5 @@
-(function(){
-  console.log('Admin script loaded');
+function initAdmin(){
+  console.log('Admin panel initialized');
 
   /** State */
   let guests = [];
@@ -228,6 +228,7 @@
     }
   });
 
-  // Init
   loadInitial();
-})();
+}
+
+window.initAdmin = initAdmin;
