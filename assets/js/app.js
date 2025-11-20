@@ -14,12 +14,12 @@ window.addEventListener('load', () => {
 
   function play(){
     if(!isSupported) return;
+    audio.muted = false;
     audio.play().catch((err)=>{
       console.log('Autoplay blocked:', err);
       isSupported = false;
-      // Don't hide button, let user click to play
       btn.classList.add('autoplay-blocked');
-      btn.title = 'Klik untuk memutar musik';
+      btn.title = 'Click to play music';
     });
     btn.classList.remove('paused');
   }
