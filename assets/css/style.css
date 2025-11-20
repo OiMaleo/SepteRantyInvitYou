@@ -129,6 +129,8 @@ img{max-width:100%;display:block}
 .hero-inner{text-align:center;position:relative;z-index:2;animation:fadeInUp 1s ease-out .3s both}
 .pretitle{letter-spacing:.2em;text-transform:uppercase;color:var(--text-accent);font-size:var(--font-size-sm);font-weight:var(--font-weight-medium);margin-bottom:var(--space-lg);opacity:0.8;animation:fadeIn 1.2s ease-out .1s both}
 .couple{font-family:"Playfair Display",serif;font-size:clamp(var(--font-size-4xl), 8vw, var(--font-size-6xl));margin:var(--space-md) 0;color:var(--text-primary);font-weight:var(--font-weight-bold);letter-spacing:.01em;text-shadow:0 2px 20px rgba(0,0,0,.3);animation:fadeInUp 1.2s ease-out .5s both}
+.couple-names-inline{margin:var(--space-md) 0}
+.couple-display{font-family:"Playfair Display",serif;font-size:clamp(32px,7vw,52px);color:var(--text-primary);font-weight:var(--font-weight-bold);margin:0;letter-spacing:.02em}
 .date{opacity:.9;font-size:var(--font-size-lg);margin-top:var(--space-sm);color:var(--accent-warm);font-weight:var(--font-weight-medium);animation:fadeIn 1.2s ease-out .9s both}
 
 /* Premium Hero Animations */
@@ -149,24 +151,32 @@ img{max-width:100%;display:block}
 .btn-light:hover{background:var(--glass-medium);border-color:var(--glass-strong);transform:translateY(-1px)}
 
 /* ----- Cards & Glass ----- */
-.card, .detail-card, .rsvp-card, .gift-card{background:var(--glass-light);border:1px solid var(--glass-medium);border-radius:var(--radius-lg);backdrop-filter:blur(20px);padding:clamp(var(--space-lg), 5vw, var(--space-2xl));position:relative;overflow:hidden;box-shadow:var(--shadow-medium);transition:var(--transition-slow);opacity:0;transform:translateY(20px)}
+.card, .detail-card, .rsvp-card, .gift-card{background:var(--glass-light);border:1px solid var(--glass-medium);border-radius:var(--radius-lg);backdrop-filter:blur(20px);padding:clamp(var(--space-lg), 5vw, var(--space-2xl));position:relative;overflow:hidden;box-shadow:var(--shadow-medium);transition:box-shadow 0.3s ease;opacity:1;transform:translateY(0)}
 .card.verse{overflow:visible;min-height:auto}
 .card.animate{opacity:1;transform:translateY(0)}
 .card::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg, var(--glass-subtle), transparent);pointer-events:none;border-radius:inherit}
-.card-glow{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg, var(--glass-subtle), transparent);opacity:0;pointer-events:none;border-radius:inherit;transition:var(--transition-slow)}
-.card:hover .card-glow{opacity:0.3}
-.card:hover{transform:translateY(-1px);box-shadow:var(--shadow-strong)}
+.card-glow{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg, var(--glass-subtle), transparent);opacity:0;pointer-events:none;border-radius:inherit;transition:opacity 0.3s ease}
+.card:hover .card-glow{opacity:0.2}
+.card:hover{box-shadow:var(--shadow-strong)}
 
 /* ----- Invitation ----- */
 .section-invite{background:linear-gradient(180deg, var(--primary) 0%, var(--primary-light) 100%);position:relative}
 .section-invite::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:radial-gradient(circle at 40% 30%, var(--glass-subtle) 0%, transparent 40%)}
 .section-invite .container{position:relative;z-index:2}
-.section-invite .greeting{opacity:.9;font-size:var(--font-size-lg);margin-bottom:var(--space-lg);color:var(--accent-warm);font-weight:var(--font-weight-medium);line-height:var(--line-height-relaxed)}
-.section-invite .names{font-family:"Playfair Display",serif;font-weight:var(--font-weight-bold);font-size:clamp(var(--font-size-3xl), 6vw, var(--font-size-5xl));margin:var(--space-lg) 0;color:var(--text-primary);letter-spacing:.02em}
-.section-invite .quote{font-style:italic;opacity:.9;border-left:3px solid var(--accent);padding-left:var(--space-lg);font-size:var(--font-size-lg);line-height:var(--line-height-relaxed);color:var(--text-secondary);position:relative}
-.section-invite .quote::before{content:'"';position:absolute;left:-8px;top:-10px;font-size:60px;color:var(--gold);opacity:.3;font-family:serif}
-.section-invite .verse .quote{font-size:clamp(14px, 4vw, 24px);line-height:1.7;padding-left:16px;border-left:3px solid var(--gold);word-wrap:break-word;hyphens:auto;text-align:justify;text-justify:inter-word;overflow-wrap:anywhere}
-.section-invite .intro .guest-name{display:block;margin:0 0 var(--space-lg);padding:var(--space-sm) var(--space-lg);border-radius:var(--radius-xl);border:1px solid var(--glass-medium);background:linear-gradient(135deg, var(--glass-light), var(--glass-subtle));color:var(--accent-light);font-weight:var(--font-weight-semibold);backdrop-filter:blur(10px);box-shadow:var(--shadow-soft)}
+.section-invite .greeting{opacity:.95;font-size:var(--font-size-lg);margin-bottom:var(--space-lg);color:var(--text-secondary);font-weight:var(--font-weight-regular);line-height:1.6}
+.section-invite .names{font-family:"Playfair Display",serif;font-weight:var(--font-weight-bold);font-size:clamp(var(--font-size-3xl), 6vw, var(--font-size-5xl));margin:var(--space-md) 0;color:var(--text-primary);letter-spacing:.02em}
+.section-invite .quote{font-style:italic;opacity:.95;border-left:none;padding-left:0;font-size:var(--font-size-lg);line-height:1.8;color:var(--text-secondary);position:relative;text-align:center}
+.section-invite .quote::before{content:'';display:none}
+.section-invite .verse .quote{font-size:clamp(16px, 4vw, 22px);line-height:1.8;padding:0;border-left:none;word-wrap:break-word;hyphens:auto;text-align:center;text-justify:auto;overflow-wrap:anywhere}
+.section-invite .intro .guest-name{display:block;margin:0 0 var(--space-lg);padding:var(--space-sm) var(--space-lg);border-radius:var(--radius-xl);border:none;background:transparent;color:var(--accent-light);font-weight:var(--font-weight-semibold);backdrop-filter:none;box-shadow:none}
+
+/* ----- Parents Section ----- */
+.section-parents{background:linear-gradient(180deg, var(--primary-light) 0%, var(--primary) 100%);position:relative}
+.section-parents::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:radial-gradient(circle at 50% 50%, var(--glass-subtle) 0%, transparent 50%)}
+.section-parents .container{position:relative;z-index:2}
+.parents-card{text-align:center;padding:clamp(var(--space-lg), 4vw, var(--space-2xl))}
+.parents-label{opacity:.85;font-size:var(--font-size-sm);color:var(--text-accent);font-weight:var(--font-weight-medium);letter-spacing:.1em;text-transform:uppercase;margin-bottom:var(--space-md)}
+.parents-names{font-family:"Playfair Display",serif;font-size:clamp(20px,5vw,32px);color:var(--accent-light);font-weight:var(--font-weight-bold);margin:0;letter-spacing:.01em;line-height:1.6}
 
 /* ----- Details ----- */
 .section-details{background:linear-gradient(180deg, var(--primary-light) 0%, var(--primary) 100%);position:relative}
@@ -293,8 +303,7 @@ img{max-width:100%;display:block}
 
 @media(max-width:320px){
   .scroll-indicator{display:none} /* Hide on very small screens */
-  .section-invite .verse .quote{font-size:clamp(13px, 5vw, 16px);padding-left:12px;border-left:2px solid var(--gold);line-height:1.4;word-spacing:0.3px;letter-spacing:0.2px;text-align:left}
-  .section-invite .quote::before{font-size:30px;left:-3px;top:-3px}
+  .section-invite .verse .quote{font-size:clamp(13px, 5vw, 16px);padding:0;border-left:none;line-height:1.6;word-spacing:0.3px;letter-spacing:0.2px;text-align:center}
   .card.verse{padding:25px 20px}
 }
 
@@ -302,21 +311,21 @@ img{max-width:100%;display:block}
 @keyframes cardEntrance{from{opacity:0;transform:translateY(30px) scale(0.95)}to{opacity:1;transform:translateY(0) scale(1)}}
 @keyframes cardEntranceStagger{from{opacity:0;transform:translateY(30px) scale(0.95)}to{opacity:1;transform:translateY(0) scale(1)}}
 
-.card-entrance{animation:cardEntrance 0.6s ease-out forwards}
-.card-entrance-delayed{animation:cardEntrance 0.6s ease-out 0.2s forwards}
-.card-entrance-delayed-2{animation:cardEntrance 0.6s ease-out 0.4s forwards}
+.card-entrance{opacity:1}
+.card-entrance-delayed{opacity:1}
+.card-entrance-delayed-2{opacity:1}
 
 /* Event Icons */
-.event-icon{font-size:48px;margin-bottom:15px;text-shadow:0 2px 10px rgba(0,0,0,0.3);animation:bounceIn 1s ease-out}
+.event-icon{font-size:48px;margin-bottom:15px;text-shadow:0 2px 10px rgba(0,0,0,0.3)}
 
 /* Countdown Enhancements */
-.cd-shine{position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg, transparent, rgba(212,175,55,0.3), transparent);animation:cardShine 4s ease-in-out infinite}
-.animate-counter{animation:counterPulse 2s ease-in-out infinite}
+.cd-shine{position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg, transparent, rgba(212,175,55,0.3), transparent)}
+.animate-counter{}
 
 /* Barcode Animations */
-.animate-barcode-scan{animation:barcodeScan 2s ease-in-out infinite}
-.animate-barcode-scan-delayed{animation:barcodeScan 2s ease-in-out infinite 0.5s}
-.animate-pulse-glow{animation:glowPulse 3s ease-in-out infinite}
+.animate-barcode-scan{}
+.animate-barcode-scan-delayed{}
+.animate-pulse-glow{}
 
 /* Advanced Animation Classes */
 .animate-float{animation:float 6s ease-in-out infinite}
@@ -467,8 +476,8 @@ img{max-width:100%;display:block}
   .hero-background-image-top{max-width:180px;top:2%;left:2%}
   .hero-background-image{max-width:180px;bottom:3%;right:2%}
   .section-invite .names{font-size:clamp(36px,7vw,70px)}
-  .section-invite .verse .quote{font-size:clamp(18px, 3.5vw, 22px);padding-left:18px;border-left:4px solid var(--gold);line-height:1.6}
-  .section-invite .quote::before{font-size:50px;left:-6px;top:-8px}
+  .section-invite .verse .quote{font-size:clamp(18px, 3.5vw, 22px);padding:0;border-left:none;line-height:1.7;text-align:center}
+  .section-invite .quote::before{display:none}
   .card.verse{padding:40px 35px}
   .section{padding:50px 0}
   .grid-2{grid-template-columns:1fr;gap:35px}
@@ -488,8 +497,7 @@ img{max-width:100%;display:block}
   .pretitle{font-size:12px;margin-bottom:12px}
   .couple{font-size:clamp(32px,12vw,60px);margin:8px 0}
   .date{font-size:16px;margin-top:6px}
-  .section-invite .verse .quote{font-size:clamp(16px, 4vw, 20px);padding-left:16px;border-left:3px solid var(--gold);line-height:1.6}
-  .section-invite .quote::before{font-size:45px;left:-5px;top:-6px}
+  .section-invite .verse .quote{font-size:clamp(16px, 4vw, 20px);padding:0;border-left:none;line-height:1.7;text-align:center}
   .card.verse{padding:32px 28px}
   .section{padding:45px 0}
   .section-invite .names{font-size:clamp(28px,8vw,50px)}
@@ -516,11 +524,12 @@ img{max-width:100%;display:block}
   .pretitle{font-size:11px;margin-bottom:10px;letter-spacing:.2em}
   .couple{font-size:clamp(28px,14vw,52px);margin:6px 0;letter-spacing:.01em}
   .date{font-size:14px;margin-top:4px}
-  .section-invite .verse .quote{font-size:clamp(14px, 4.5vw, 18px);padding-left:14px;border-left:2px solid var(--gold);line-height:1.5;word-spacing:0.5px;text-align:left}
-  .section-invite .quote::before{font-size:35px;left:-4px;top:-4px}
+  .section-invite .verse .quote{font-size:clamp(14px, 4.5vw, 18px);padding:0;border-left:none;line-height:1.6;word-spacing:0.5px;text-align:center}
   .card.verse{padding:28px 24px}
   .section{padding:35px 0}
   .section-invite .names{font-size:clamp(24px,9vw,44px)}
+  .couple-display{font-size:clamp(24px,6vw,40px)}
+  .parents-names{font-size:clamp(16px,4vw,24px)}
   .section-invite .greeting{font-size:15px;margin-bottom:14px}
   .section-invite .intro .guest-name{padding:8px 12px;border-radius:25px;font-size:14px}
   .grid-2{grid-template-columns:1fr;gap:25px}
