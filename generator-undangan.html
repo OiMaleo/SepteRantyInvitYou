@@ -166,9 +166,10 @@
             <h3>📋 Cara Penggunaan:</h3>
             <ul>
                 <li>Masukkan daftar nama tamu (satu nama per baris)</li>
-                <li>Klik "Generate Link Undangan" untuk membuat link personal</li>
-                <li>Salin dan bagikan link ke setiap tamu</li>
-                <li>Link akan berbentuk: <code>undangan.html?nama=NamaTamu</code></li>
+                <li>Klik "Generate Link Undangan" untuk membuat link + QR code personal</li>
+                <li>Setiap tamu akan mendapat link dan QR code unik</li>
+                <li>Salin link atau screenshot QR code untuk dibagikan via WhatsApp</li>
+                <li>Tamu cukup scan QR code atau klik link untuk buka undangan</li>
             </ul>
         </div>
 
@@ -192,6 +193,7 @@ Dr. Hendro Kusumo"></textarea>
         <div id="stats" class="stats"></div>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode.js/1.5.3/qrcode.min.js"></script>
     <script>
         function generateLinks() {
             const guestList = document.getElementById('guest-list').value.trim();
@@ -220,26 +222,43 @@ Dr. Hendro Kusumo"></textarea>
             // Generate links for each guest
             guests.forEach((guestName, index) => {
                 const encodedName = encodeURIComponent(guestName);
-                const invitationUrl = `${window.location.origin}/undangan/undangan.html?nama=${encodedName}`;
+                const invitationUrl = `${window.location.origin}/?to=${encodedName}`;
+                const qrcodeId = `qrcode-${index}`;
 
                 const resultItem = document.createElement('div');
                 resultItem.className = 'result-item';
 
                 resultItem.innerHTML = `
                     <div class="guest-name">${index + 1}. ${guestName}</div>
-                    <div class="invitation-link">${invitationUrl}
-                        <button class="copy-btn" onclick="copyToClipboard('${invitationUrl}')">📋 Copy</button>
+                    <div style="display: grid; grid-template-columns: 1fr 150px; gap: 15px; align-items: center; margin-top: 10px;">
+                        <div>
+                            <div class="invitation-link" style="margin-bottom: 10px;">${invitationUrl}</div>
+                            <button class="copy-btn" onclick="copyToClipboard('${invitationUrl}')">📋 Copy Link</button>
+                        </div>
+                        <div id="${qrcodeId}" style="width: 150px; height: 150px; background: white; border-radius: 8px; display: flex; align-items: center; justify-content: center;"></div>
                     </div>
                 `;
 
                 linksContainer.appendChild(resultItem);
+
+                // Generate QR code for each link
+                setTimeout(() => {
+                    new QRCode(document.getElementById(qrcodeId), {
+                        text: invitationUrl,
+                        width: 150,
+                        height: 150,
+                        colorDark: '#0b2447',
+                        colorLight: '#ffffff',
+                        correctLevel: QRCode.CorrectLevel.H
+                    });
+                }, 100);
             });
 
             // Show results
             resultsDiv.style.display = 'block';
 
             // Update stats
-            statsDiv.innerHTML = `<strong>✅ Berhasil generate ${guests.length} link undangan personal!</strong>`;
+            statsDiv.innerHTML = `<strong>✅ Berhasil generate ${guests.length} link + QR code undangan personal!</strong>`;
 
             // Scroll to results
             resultsDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
